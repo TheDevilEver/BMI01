@@ -14,8 +14,218 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    :root {
+      color-scheme: dark;
+    }
+
     body {
       font-family: 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(ellipse at top, #17191f 0%, #0c0d11 58%, #08090c 100%) !important;
+      color: #e5e7eb !important;
+    }
+
+    ::selection {
+      background: rgba(249, 115, 22, 0.35);
+      color: #fff7ed;
+    }
+
+    header {
+      background: rgba(13, 14, 18, 0.94) !important;
+      border-color: #292b31 !important;
+    }
+
+    header .bg-gradient-to-br {
+      background: linear-gradient(135deg, #fb923c, #ea580c) !important;
+      box-shadow: 0 8px 20px rgba(249, 115, 22, 0.2) !important;
+    }
+
+    main .rounded-3xl.bg-white {
+      background: #15171c !important;
+      border-color: #292c33 !important;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.26) !important;
+    }
+
+    footer {
+      background: rgba(21, 23, 28, 0.92) !important;
+      border-color: #292c33 !important;
+    }
+
+    body .text-slate-900,
+    body .text-slate-800,
+    body .text-slate-700 {
+      color: #e5e7eb !important;
+    }
+
+    body .text-slate-600,
+    body .text-slate-500 {
+      color: #a1a1aa !important;
+    }
+
+    body .text-slate-400 {
+      color: #858994 !important;
+    }
+
+    body .text-teal-900,
+    body .text-teal-800,
+    body .text-teal-700,
+    body .text-teal-600 {
+      color: #fdba74 !important;
+    }
+
+    body .bg-slate-50,
+    body .bg-slate-50\/70,
+    body .bg-slate-50\/80,
+    body .bg-slate-100 {
+      background-color: #1d2026 !important;
+    }
+
+    body [class*="border-slate-"] {
+      border-color: #30333b !important;
+    }
+
+    body [class*="divide-slate-"] > :not([hidden]) ~ :not([hidden]) {
+      border-color: #30333b !important;
+    }
+
+    body .bg-teal-50,
+    body .bg-teal-50\/70 {
+      background-color: rgba(249, 115, 22, 0.12) !important;
+    }
+
+    body [class*="border-teal-"] {
+      border-color: rgba(249, 115, 22, 0.32) !important;
+    }
+
+    body .bg-teal-500,
+    body .bg-teal-600 {
+      background-color: #f97316 !important;
+    }
+
+    #btnAsia.bg-white,
+    #btnWho.bg-white,
+    #btnWaistCm.bg-white,
+    #btnWaistIn.bg-white,
+    #bmiForm input[type="radio"]:checked + span {
+      background: linear-gradient(135deg, #fb923c, #ea580c) !important;
+      color: #1c120b !important;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.22) !important;
+      --tw-ring-color: rgba(249, 115, 22, 0.4) !important;
+    }
+
+    #bmiForm input[type="number"] {
+      background: #101216 !important;
+      border-color: #343740 !important;
+      color: #f4f4f5 !important;
+    }
+
+    #bmiForm input[type="number"]:focus {
+      background: #111318 !important;
+      border-color: #f97316 !important;
+      box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.16) !important;
+    }
+
+    #bmiForm input[type="number"]::placeholder {
+      color: #717580 !important;
+    }
+
+    #calculateBtn {
+      background: linear-gradient(135deg, #fb923c, #ea580c) !important;
+      color: #1c120b !important;
+      box-shadow: 0 8px 22px rgba(249, 115, 22, 0.2) !important;
+    }
+
+    #calculateBtn:hover {
+      background: linear-gradient(135deg, #fdba74, #f97316) !important;
+      box-shadow: 0 10px 26px rgba(249, 115, 22, 0.28) !important;
+    }
+
+    #resetBtn {
+      background: #1d2026 !important;
+      border-color: #383b43 !important;
+      color: #d4d4d8 !important;
+    }
+
+    #resetBtn:hover {
+      background: #292c33 !important;
+      color: #fff !important;
+    }
+
+    #emptyState,
+    #idealWeightSection > div,
+    #weightActionCard,
+    #resultContent > div.bg-slate-50,
+    #healthAdviceText {
+      border-color: #30333b !important;
+    }
+
+    #waistAnalysisCard {
+      background: #15171c !important;
+      border-color: #30333b !important;
+    }
+
+    #seniorAlertBanner {
+      background: rgba(30, 58, 88, 0.38) !important;
+      border-color: rgba(96, 165, 250, 0.3) !important;
+      color: #dbeafe !important;
+    }
+
+    #seniorAlertBanner h3,
+    #seniorAlertBanner p,
+    #seniorAlertBanner .text-sky-900 {
+      color: #bfdbfe !important;
+    }
+
+    #idealWeightSection > div:first-child {
+      background: rgba(249, 115, 22, 0.1) !important;
+    }
+
+    #weightActionCard {
+      background: rgba(30, 58, 88, 0.28) !important;
+    }
+
+    #weightActionCard .text-sky-900 {
+      color: #bfdbfe !important;
+    }
+
+    #markerValueTag {
+      background: #f97316 !important;
+      color: #1c120b !important;
+    }
+
+    #gaugeMarker .border-t-slate-900 {
+      border-top-color: #f97316 !important;
+    }
+
+    #gaugeBarTrack {
+      background: #282b32 !important;
+      --tw-ring-color: #3a3d45 !important;
+    }
+
+    #tableCriteriaTitle,
+    #headerCriteriaLabel {
+      color: #fdba74 !important;
+    }
+
+    #bmiForm [role="tablist"],
+    #bmiForm [role="radiogroup"],
+    #bmiForm [aria-label="เลือกหน่วยรอบเอว"] {
+      background: #1d2026 !important;
+      border-color: #30333b !important;
+    }
+
+    table thead tr {
+      background: #1d2026 !important;
+    }
+
+    #formAlert {
+      background: rgba(127, 29, 29, 0.25) !important;
+      border-color: rgba(248, 113, 113, 0.35) !important;
+      color: #fecaca !important;
+    }
+
+    #formAlertText,
+    #bmiForm p[id$="Error"] {
+      color: #fecaca !important;
     }
     /* ซ่อนปุ่มลูกศรขึ้น-ลงของ input type="number" เพื่อความสวยงามบนทุกอุปกรณ์ */
     input[type="number"]::-webkit-inner-spin-button,
@@ -28,7 +238,7 @@
     }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-slate-50 via-teal-50/40 to-sky-50/60 text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900">
+<body class="min-h-screen text-slate-100 antialiased">
 
   <!-- ส่วนหัวของแอปพลิเคชัน -->
   <header class="bg-white/85 backdrop-blur-md border-b border-slate-200/70 sticky top-0 z-30">
